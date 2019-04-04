@@ -1,0 +1,552 @@
+/*######## iPAY Main CSS ########*/
+/* Genera Style */
+@import url(font-awesome.min.css);
+
+article, aside, section, footer, header, nav, figure, figcaption, blockquote, address, div
+{
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+body {
+	margin:0;
+	padding: 0;
+	font-family: "Chaparral Pro", "Segoe UI", FontAwesome, Arial;
+	font-size: 1.1em;
+	color: #fff;
+	background: #f6f9fc;
+}
+p, h1, h2, h3
+{
+	margin: 0;
+	padding: 0px;
+}
+h1 {
+	font-size: 1.4em;
+}
+h2 {
+	font-size: 1.15em;
+}
+h3 {
+	font-size: 1em;
+}
+h3 {
+	font-size: 1em;
+}
+img {
+	border: none;
+}
+a:link, a:visited {
+	text-decoration: none;
+	color: #fff;
+	border: none;
+}
+a:hover, a:active {
+	color: #fff;
+	border: none;
+}
+
+/* Logo Style */
+#logo h1 {
+	position: absolute;
+	top: 15px;
+	font-size: 1.2em;
+	text-align: center;
+	margin: 5px 0 0 0;
+	z-index: 5;
+}
+span#pm {
+	margin: -5px 0 0 0;
+	display: block;
+	font-size: .8em;
+}
+
+/* Navigation Style */
+.lavaLampWithImage {
+  position: relative;
+  height: 35px;
+  padding: 0 5px 15px 0;
+  margin: 15px 0 0 0;
+  font-size: .9em;
+  font-family: ;
+  overflow: hidden;
+  float: right;
+}
+.lavaLampWithImage li {
+  float: left;
+  list-style: none;
+  max-width: auto
+}
+.lavaLampWithImage li.back {
+  background: rgb(255, 175, 75);
+  height: 30px;
+  margin-top: 8px;
+  z-index: 8;
+  position: absolute;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+.lavaLampWithImage li a {
+  font: normal 100% "Chaparral Pro", Arial;
+  text-shadow: none;
+  text-decoration: none;
+  color: rgb(233, 233, 233);
+  outline: none;
+  text-align: center;
+  letter-spacing: 0;
+  z-index: 10;
+  display: block;
+  float: left;
+  line-height: 35px;
+  padding: 5px 0 5px 0;
+  position: relative;
+  overflow: hidden;
+  margin: auto 16px;    
+}
+.lavaLampWithImage li a.current_menu {
+	cursor: default;
+	color: #fff;
+}
+.lavaLampWithImage li a:hover, .lavaLampWithImage li a:active, .lavaLampWithImage li a:visited {
+	color: #fff;
+	border: none;
+}
+.lavaLampWithImage li:nth-child(2) {
+	margin-right: 50px;
+}
+
+/* ### Header Style ### */
+div#wrap_header {
+	margin: 0;
+	padding: 0;
+	height: 600px;
+	background: url("../images/bg.png") no-repeat;	
+}
+	header {
+		position: relative;
+		width: 1150px;
+		margin: 0 auto;
+	}
+		header div#note {
+			position: absolute;
+			right: 0;
+			top: 275px;
+			text-align: right;
+			border: none;
+		}
+			div#note img {
+				position: absolute;
+				right:0;
+				top: 3px;
+			}
+			div#note h2, div#note p {
+				margin: 0 55px 0 0px;
+			}
+			header div#profile_detail {
+			position: absolute;
+			top: 275px;
+			left: 0;
+			font-family: "Times New Roman", FontAwesome, Arial;
+			text-align: left;
+			line-height: 1.5em;
+			border: none;
+		}
+			/* canvas#profile_pic_canvas {
+				position: absolute;
+				top: -3px;
+				left: -60px;
+				border: none;
+			}*/
+			div#profile_detail h2, div#profile_detail p, div#profile_detail input  {
+				margin: 0 60px 0 0;
+			}
+			div#profile_detail #edit_profile_button {
+				padding: 5px 10px 5px 10px;
+				color: rgb(200, 200, 200);
+				margin: 10px 60px 0 0;
+				background-color: #fff;
+				border-radius: 4px;
+				-moz-border-radius: 4px;
+				-webkit-border-radius: 4px;
+				border: 1px solid rgb(200, 200, 200);
+			}
+
+/*####### General Content Style #######*/
+/* Main Content Styles */
+div#main_content {
+	position: relative;
+	width: 1150px;
+	margin: 0 auto;
+	border: none;
+}
+	div#intro_account {
+		position: absolute;
+		top: 150px;
+		left: 0px;
+		border: none;
+	}
+		#intro_account img, #intro_account h2 {
+			display: inline-block;
+			margin: 0 5px 0 0;
+			font-size: 1.3em;
+		}
+		#intro_account p {
+			margin: 0 0 0 3px;
+			font-size: 1.1em;
+		}
+	div#profile {
+		width: 450px;
+		margin: -100px 0 50px 0;
+		padding: 0;
+		float: right;
+		border: none;
+	}
+		div#profile h2 {
+			margin: 0 0 15px 0;
+			font-family: "Times New Roman", "FontAwesome", Arial;
+			font-size: 1.8em;
+			color: rgb(255, 175, 75);
+			border: none;
+		}
+		div#profile span {
+			color: rgb(102, 45, 145);
+		}
+		div#profile form select {
+			display: block;
+			width: 422px;
+			height: 35px;
+			margin: 4px 0 10px 0;
+			font-family: arial, FontAwesome;
+			padding: 3px 10px 3px 10px;
+			border: 1px solid  rgb(102, 45, 145);
+			border-radius: 4px;
+			-moz-border-radius: 4px;
+			-webkit-border: 4px;
+		}
+		div#profile form input.creating_profile {
+			display: block;
+			width: 400px;
+			height: 25px;
+			margin: 4px 0 10px 0;
+			font-family: arial, FontAwesome;
+			padding: 3px 10px 3px 10px;
+			border: 1px solid rgb(102, 45, 145);
+			border-radius: 4px;
+			-moz-border-radius: 4px;
+			-webkit-border: 4px;
+		}
+		input#api, input#token {
+			display: block;
+			width: 400px;
+			height: 25px;
+			margin: 4px 0 10px 0;
+			font-family: arial, FontAwesome;
+			padding: 3px 10px 3px 10px;
+			border: 1px solid rgb(200, 200, 200);
+			border-radius: 4px;
+			-moz-border-radius: 4px;
+			-webkit-border: 4px;
+		}
+		div#profile form input#save_profile_button {
+			padding: 10px 20px 10px 20px;
+			color: #fff;
+			margin: 10px 0 15px 0;
+			background-color: rgb(255, 175, 75);
+			border-radius: 4px;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+			border: 1px solid rgb(255, 175, 75);
+		}
+	div#adding_telephone {
+		position: relative;
+		width: 650px;
+		float: right;
+		padding: 0;
+		margin: 15px 0 0 0;
+		border: none;
+	}
+		div#adding_telephone {
+			color: rgb(102, 45, 145);
+		}
+		div#adding_telephone form select {
+			display: block;
+			width: 657px;
+			height: 35px;
+			margin: 4px 0 10px -11px;
+			font-family: arial, FontAwesome;
+			padding: 3px 10px 3px 10px;
+			border: 1px solid  rgb(102, 45, 145);
+			border-radius: 4px;
+			-moz-border-radius: 4px;
+			-webkit-border: 4px;
+		}
+		span.operator_title {
+			margin: 0 0 0 -10px;
+		}
+		div#adding_telephone form input.creating_profile {
+			display: block;
+			width: 400px;
+			height: 25px;
+			margin: 4px 0 10px 0;
+			font-family: arial, FontAwesome;
+			padding: 3px 10px 3px 10px;
+			border: 1px solid rgb(102, 45, 145);
+			border-radius: 4px;
+			-moz-border-radius: 4px;
+			-webkit-border: 4px;
+		}
+		div#adding_telephone form input#associate_tel_button {
+			position: absolute;
+			top: 92px;
+			left: 477px;
+			padding: 10px 20px 10px 20px;
+			color: rgb(200, 200, 200);
+			background-color: #fff;
+			border-radius: 4px;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+			border: 1px solid rgb(200, 200, 200);
+		}
+		div#adding_telephone form input.button:hover {
+			cursor: pointer;
+			background: rgb(255, 255, 255);
+			color: rgb(102, 45, 145);
+			border-radius: 4px;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+			border: 1px solid rgb(225, 225, 225);
+		}
+		#telProfileInput  input{
+			display: block;
+			width: 460px;
+			height: 25px;
+			margin: 4px 0 10px -10px;
+			font-family: arial, FontAwesome;
+			padding: 5px 10px 5px 10px;
+			border: 1px solid rgb(102, 45, 145);
+			border-radius: 4px;
+			-moz-border-radius: 4px;
+			-webkit-border: 4px;
+		}
+	div#existing_profile {
+		padding: 0;
+		margin: 0;
+		width: 630px;
+		border: none;
+	}
+		#existing_profile h2 {
+			color: rgb(102, 45, 145);
+			margin: 0 0 15px 0;
+			text-align: center;
+		}
+		/* Table Styles */
+		#existing_profile div#profile_table {
+			overflow: auto;
+			width: 665px;
+			height: 482px;
+			font-family: "Times New Roman",FontAwesome, Arial;
+			font-size: .9em;
+			border: none;
+		}
+		#existing_profile table {
+			height: 138px;
+			border: none;
+		}
+			#existing_profile table th {
+				padding: 10px 70px 10px 70px;
+				margin: 0;
+				color: #fff;
+				background: rgb(100, 100, 100);
+				border-radius: 4px;
+				-moz-border-radius: 4px;
+				-webkit-border: 4px;
+			}
+			#existing_profile table td {
+				color: #000;
+				padding: 10px 0 10px 0;
+				text-align: center;
+				background: #fff;
+				border-radius: 4px;
+				-moz-border-radius: 4px;
+				-webkit-border: 4px;
+			}
+			#existing_profile table a {
+				color: rgb(45, 45, 45);
+				border: none;
+			}
+				#existing_profile table a:hover {
+					font-weight: bold;
+					color: rgb(102, 45, 145);
+				}
+		#existing_profile input#add_tel_button {
+			float: right;
+			margin: 15px 25px 0 0;
+			padding: 10px 20px 10px 20px;
+			color: #fff;
+			background-color: rgb(102, 45, 145);
+			border-radius: 4px;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+			border: 1px solid rgb(102, 45, 145);
+		}
+		#add_tel_button:hover, #save_profile_button:hover {
+			cursor: pointer;
+		}
+		#associate_tel_button:hover {
+			cursor: default;
+		}
+.clear {
+	clear: both;
+}
+.clearR {
+	clear: right;
+}
+
+/* Contact Overlay */
+#overlay_contact {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+	div.menu_bar {
+		width: 100%;
+		height: 76px;
+		padding: 0;
+		margin: 0 0 75px 0;
+		background: rgb(102, 45, 145)
+	}
+	div#contact_form {
+		position: relative;
+		width: 300px;
+		height: 410px;
+		margin: 0 auto;
+		padding: 45px 0 0 0;
+		text-align: center;
+		background: #fff;
+		border: 1px solid #fff;
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+		-webkit-border: px;
+	}
+		div#contact_msg {
+			margin: 0 0 15px 0;
+		}
+			div#contact_form {
+				padding: 25px 0 0 0;
+			}
+			div#contact_form  p {
+				color: rgb(100, 100, 100);
+			}
+			div#contact_form  p, div#contact_form img{
+				display: inline-block;
+				margin: 0 10px -4px 0;
+			}
+		div#contact_form input {
+			width: 230px;
+			height: 25px;
+			font-family: arial, FontAwesome;
+			padding: 3px 10px 3px 10px;
+			border: 1px solid  rgb(102, 45, 145);
+			border-radius: 4px;
+			-moz-border-radius: 4px;
+			-webkit-border: 4px;
+		}
+		div#contact_form textarea {
+			width: 230px;
+			height: 125px;
+			font-family: arial, FontAwesome;
+			padding: 3px 10px 3px 10px;
+			margin: 0;
+			border: 1px solid  rgb(102, 45, 145);
+			border-radius: 4px;
+			-moz-border-radius: 4px;
+			-webkit-border: 4px;
+		}
+		div#contact_form input.submit, div#contact_form input.cancel {
+			float: right;
+			width: 100px;
+			height: 30px;
+			display: inline-block;
+			background:  rgb(255, 175, 75);
+			color: #fff;
+			margin: 0;
+			padding: 1px;
+			border: 1px solid rgb(255, 175, 75);
+			border-radius: 4px;
+			-moz-border-radius: 4px;
+			-webkit-border: 4px;
+			margin: 15px 15px 20px 0;
+		}
+		div#contact_form input.cancel {
+			margin: 15px 25px 20px 0;;
+		}
+		div#contact_form input.submit:hover, div#contact_form input.cancel:hover {
+			cursor: pointer;
+			background: rgb(200, 200, 200);
+			border: 1px solid rgb(200, 200, 200)
+			
+		}
+
+/* Notification Popup Styles */
+div#notification_popup {
+	display: none; /* set the display to "block" to see the popup */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 4;
+}
+	#notification_popup div.bar {
+		margin: 0 0 200px 0;
+	}
+	#notification_popup div#notif_msg {
+		position: relative;
+		width: 400px;
+		margin: 0 auto;
+		padding: 65px 25px 75px 25px;
+		color: rgb(75, 75, 75);
+		text-align: center;
+		background: #fff;
+		border: 1px solid #fff;
+		border-radius: 7px;
+		-moz-border-radius: 7px;
+		-webkit-border-radius: 7px;
+	}
+		#notif_msg #goBack {
+			position: absolute;
+			top: -15px;
+			left: 423px;
+		}
+
+/* Footer Style */
+#wrap_footer footer p {
+	margin: 0 auto;
+	width: 900px;
+	color: rgb(112, 112, 112);
+	font-size: .6em;
+	font-family: "Arial";
+	padding: 5px 0 25px 0;
+	border: none;
+}
+#wrap_footer footer p a{
+	color: inherit;
+}
+footer  {
+	text-align: center;
+	margin: 0 auto;
+	padding: 0;
+	width: 1150px;
+	border: none;
+}

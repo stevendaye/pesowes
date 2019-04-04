@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="content-type" content="text/html" charset="utf-8"/>
+		<title>PaiementsMobiles.com</title>
+		<link rel="stylesheet" type="text/css" href="css/statistics.css"/>
+		<link rel='stylesheet' type='text/css' href='http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css'/>
+		<meta name="keywords" content="mobile money, payement en ligne, transaction en ligne, moov money, flooz"/>
+		<meta name="description" content="paiementsmobiles.com: Nous sommes le lien entre vos sites de ventes en ligne et vos clients MTN Money et MOOV Money pour des paiements en toute simplicité, sécurité et fiabilité"/>
+		<meta name="author" content="stevendaye@padpied.com"/>
+		<meta name="width=device-width, initial-scale=1.0"/>
+		<!--[if lt IE 11]>
+			<link rel="stylesheet" type="text/css" href="png_displayer.css"/>
+		<![endif]-->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body id="doc_scroll_bar">
+		<div id="wrap_header">
+			<header id="start">
+				<div id="logo">
+					<h1><a href="#index.html">Pesowes<span id="pm"></a></span></h1>
+				</div>
+				<nav>
+					<ul class="lavaLampWithImage" id="lava_menu">
+						<li ><a href="account.html">Compte</a></li>
+						<li class="current"><a href="statistics.html" class="current_menu">Statistiques</a></li>
+						<li><a href="index.html">Déconnexion</a></li>
+					</ul>
+				</nav>
+				<img src="images/stats.png" id="stats_illustration" width="" height="" alt=""/>
+				<div class="clear"></div>
+				<div id="stats_intro">
+					<h1>GARDER UN OEIL SUR VOS ACTIVITES A CHAQUE INSTANT</h1>
+					<p>Nous vous fournissons à chaque seconde un point statistique sur chaque activité menée<br/> sur votre site. Pour plus de flexibilité, vous pouvez désormais exporter votre point<br/>statistque en fichier pdf.</p>
+				</div>
+			</header>
+		</div>
+		<div id="main_content">
+			<div id="content">
+				<label for="mobileNumber"><span class="number">Numéro <em>Mobile Money</em> Marchand</span></label>
+				<form id="stats" method="POST" action="stats.java"> <!-- Statistics will be handled by JAVA here -->
+					<select name="msisdns" id="msisdns">
+						<option class="none">Selectionnez un numéro</option>
+						<option class="moov">MOOV</option>
+						<option class="mtn">MTN</option>
+					</select>
+					<label id="period">Choisir une période</label>
+					<div id="from">
+						<label>Du&nbsp;&nbsp;&nbsp;<input type="date" id="from_date"/></label>
+					</div>
+					<div id="to">
+						<label>Au&nbsp;&nbsp;&nbsp;<input type="date" id="to_date"/></label>
+					</div>
+					<input type="button" value="Exporter les statistiques" id="export"/>
+					<p class="fictiveCode" style="display:none;"><input type="text" placeholder="Veuillez entrer le code reçus par SMS sur votre numéro" class="pay" id="code" name="code" required /></p>
+				</form>
+				<table id="records">
+					<th>N°</th><th>Date &amp; Heure</th><th>Numéro Payeur</th><th>Numéro Receveur</th><th>Montant</th><th>Description Achat</th><th>Référence Transaction</th><th>Référence Mobile Money(Opérateur)</th>
+					<!-- <tr><td>1</td><td>#Date</td><td>#NumP</td><td>#NumR</td><td>#Mont</td><td>#Desc</td><td>#NumTransact</td><td>#RefMoMo</td></tr> --> <!-- Action Must Be Perfomed In Java To Allow User To Remove Telephone Numbers From Their profile -->
+					<tr class="noNumberSaved"><td colspan="8">Aucune Donnée Enrégistrée!</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+				</table>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="overlay_contact">
+			<div class="menu_bar"></div>
+			<div id="contact_form">
+				<div id="contact_msg">
+					<img src="images/mail.png" width="" height="" alt="Mail Icon"/><p>Ecrivez à notre équipe</p>
+				</div>
+				<form method="POST" action="contact.html">
+					<input type="text" placeholder="Nom" id="fname"/><br/><br/>
+					<input type="text" placeholder="Prénom" id="lname"/><br/><br/>
+					<input type="email" placeholder="Email" id="email"/><br/><br/>
+					<textarea style="font-size: .8em; color: rgb(100, 100, 100);">Comment pouvons nous vous aider?</textarea>
+					<input type="reset" value="Annuler" class="cancel" id="abort"/><input type="submit" value="Envoyer" class="submit" onclick="sendMail()"/>
+				</form>
+			</div>
+		</div>
+		<div id="notification_popup">
+			<div class="menu_bar bar" ></div>
+			<div id="notif_msg">
+				<input type="image" src="images/quit.png" id="goBack"/>
+				<p id="notification">Insert notification message here</p>
+			</div>
+		</div>
+		<div class="fictiveBlock" style="display:none;" id="contact">
+			<p class="create_account_button" id="createAccount">CREER UN COMPTE MOBIC</p>
+			<p class="cnx" id="scnx">Se Connecter</p>
+			<div id="down_decision_buttons">
+				<a href="#start" id="downRegistration"><p>Prêt à démarer votre compte Mobic?</p></a>
+				<a href="#start" id="downContact"><p>Contactez un de nos agents commercial!</p></a>
+				<div id="weAreOnline">
+					<p id="helloMsg">Salut, pouvons-nous vous aider en quoique ce soit?</p>
+					<canvas id="weAreOnlineBox" width="52" height="52"></canvas>
+					<div id="accountMenu"></div>
+					<div id="telProfileInput"></div>
+					<div id="msisdn"></div>
+				</div>
+			</div>
+		</div>
+		<div id="wrap_footer">
+			<footer>
+				<p><a href="#apropos.html">A Propos</a> - <a href="#start" id="footerContact">Contactez Nous</a> - <a href="#conditions.html">Regles &amp; Conditions d'Utilisation</a> - <a href="#confidentialite.html">Confidentialités</a> - <a href="#securite.html">Sécurité</a> - Tous Droits Réservés &copy; IREtechnology 2017</p>
+			</footer>
+		</div>
+		<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+		<script type="text/javascript" src="js/jquery.lavalamp.min.js"></script>
+		<script type="text/javascript" src="js/js_cnx_script.js"></script>
+		<script type="text/javascript" src="js/val_ctrl_script.js"></script>
+		<script type="text/javascript">
+			$("#date").datepicker();
+		</script>
+	</body>
+</html>

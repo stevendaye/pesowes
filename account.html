@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="content-type" content="text/html" charset="utf-8"/>
+		<title>PaiementsMobiles.com</title>
+		<link rel="stylesheet" type="text/css" href="css/account.css"/>
+		<meta name="keywords" content="mobile money, payement en ligne, transaction en ligne, moov money, flooz"/>
+		<meta name="description" content="paiementsmobiles.com: Nous sommes le lien entre vos sites de ventes en ligne et vos clients MTN Money et MOOV Money pour des paiements en toute simplicité, sécurité et fiabilité"/>
+		<meta name="author" content="iretech.com"/>
+		<meta name="width=device-width, initial-scale=1.0"/>
+		<!--[if lt IE 11]>
+			<link rel="stylesheet" type="text/css" href="png_displayer.css"/>
+		<![endif]-->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body id="doc_scroll_bar">
+		<div id="wrap_header">
+			<header id="start">
+				<div id="logo">
+					<h1><a href="#index.html">Pesowes<span id="pm"></a></span></h1>
+				</div>
+				<nav>
+					<ul class="lavaLampWithImage" id="lava_menu";>
+						<li class="current"><a href="#" class="current_menu">Compte</a></li>
+						<li><a href="statistics.html">Statistiques</a></li>
+						<li><a href="index.html">Déconnexion</a></li>
+					</ul>
+				</nav>
+				<div id="intro_account">
+					<img src="images/home.png" width="" height="" alt=""/><h2>BIENVENUE SUR VOTRE COMPTE</h2>
+					<p>Démarrez votre expérience en commençant par créer votre profil</p>
+				</div>
+				<div id="note">
+					<img src="images/note_icon.png" width="" height="" alt=""/>
+					<h2>Vos transactions paiementsmobiles.com sont sécurisées</h2>
+					<p style="width: 600px;">Votre expérience démare dès maintenant. Veuillez commencer par remplir le<br/>formumaire ci-dessous pour créer le profil de votre boutique en ligne et enrégistrer<br/>chaque numéro que vous souhaitez utiliser pour vos transcations <em>Mobile Money</em>.</p>
+				</div>
+				<div id="profile_detail">
+					<!-- <canvas id="profile_pic_canvas" width="52" height="52"></canvas> -->
+					<h2 id="shop_name">Nom de la Boutique en Ligne</h2>
+					<p>Par : <strong><span class="full_name">Nom du Propriétaire</span></strong></p>
+					<p>Mode de facturation : <strong><span class="charging_mode">En Attente</span></strong></p>
+					<p>Nombre de numéros marchand : <span class="charging_mode"><b>00</b></span></p>
+					<input type="button" value="Modifier Profil" id="edit_profile_button"/> <!-- Action Must be Done in Java To Allow User To Edit His/Her Profile -->
+				</div>
+			</header>
+		</div>
+		<div id="main_content">
+			<div id="profile">
+				<h2>Enregistrez vos numéros <em>Mobile Money</em> pour démarrer vos transactions commerciales</h2>
+				<form method="POST" action="#save_profile.java" id="profile_form"> <!-- Action Must Be Performed In Java To Save The User Profile  -->
+					<label for="mode"><span class="mode">Mode de facturation</span></label><br/>
+					<select name="" id="charging_type">
+						<option>Selectionnez votre mode de facturation</option>
+						<option>Facturé à la boutique</option>
+						<option>Facturé au client</option>
+					</select>
+					<label for="fname"><span class="payment_title">Nom</span><input type="text" placeholder="" class="creating_profile" name="amount" id="fname"/></label>
+					<label for="lname"><span class="payment_title">Prénom</span><input type="text" placeholder="" class="creating_profile" name="lname" id="fee"/></label>
+					<label for="sname"><span class="payment_title">Nom de la boutique</span><input type="text" placeholder="" name="description" class="creating_profile" id="description"/></label>
+					<label for="api"><span class="payment_title">API</span><input type="text" value="#API_LINK_HERE" class="" name="api" id="api" disabled /></label>
+					<label for="token"><span class="payment_title">Token</span><input type="text" value="#TOKEN_GIVEN_HERE" class="" name="token" id="token" disabled /></label>
+					<input type="submit" value="SAUVEGARDER LE PROFIL" id="save_profile_button"/>
+					<p class="fictiveCode" style="display:none;"><input type="text" placeholder="Veuillez entrer le code reçus par SMS sur votre numéro" class="pay" id="code" name="code" required /></p>
+				</form>
+			</div>
+			<div id="existing_profile">
+				<h2>NUMEROS ENREGISTRES</h2>
+				<div id="profile_table">
+					<table>
+						<th>OPERATEUR</th><th>NUMERO</th><th>ACTION</th>
+						<!-- Action Must Be Perfomed In Java To Allow User To Remove or Delete Telephone Numbers From Their profile -->
+						<!-- <tr style="display:"><td>MOOV</td><td>+229 95 01 02 03</td><td><a href="#remove.java">RETIRER</a></td></tr> -->
+						<tr class="noNumberSaved"><td colspan="3">Aucun Numéro Enrégistré!</td><td></td><td></td></tr>
+					</table>
+					<div id="adding_telephone">
+						<form method="POST" action="#add_telephone.java"> <!-- Action Must Be Perfomed In Java To Allow User To Add Other Telephone Numbers -->
+							<label for="operator"><span class="payment_title operator_title">Opérateur Téléphonique</span></label>
+							<select name="msisdn" id="msisdn">
+								<option class="none">Selectionnez l'Opérateur</option>
+								<option class="moov">MOOV</option>
+								<option class="mtn">MTN</option>
+							</select>
+							<label for="tel" id="telProfileInput"><span class="payment_title operator_title">Numéro de Téléphone</span><input type="text" placeholder="" name="tel" id="tel"/></label>
+							<!-- <input type="submit" value="ASSOCIER UN NUMERO" id="add_tel_button"/> -->
+							<input type="button" value="AJOUTER LE NUMERO" id="associate_tel_button"/><br/>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="overlay_contact">
+			<div class="menu_bar"></div>
+			<div id="contact_form">
+				<div id="contact_msg">
+					<img src="images/mail.png" width="" height="" alt="Mail Icon"/><p>Ecrivez à notre équipe</p>
+				</div>
+				<form method="POST" action="contact.html">
+					<input type="text" placeholder="Nom" id="fname"/><br/><br/>
+					<input type="text" placeholder="Prénom" id="lname"/><br/><br/>
+					<input type="email" placeholder="Email" id="email"/><br/><br/>
+					<textarea style="font-size: .8em; color: rgb(100, 100, 100);">Comment pouvons nous vous aider?</textarea>
+					<input type="reset" value="Annuler" class="cancel" id="abort"/><input type="submit" value="Envoyer" class="submit" onclick="sendMail()"/>
+				</form>
+			</div>
+		</div>
+		<div class="fictiveBlock" style="display:none;" id="contact">
+			<p class="create_account_button" id="createAccount">CREER UN COMPTE paiementsmobiles.com</p>
+			<p class="cnx" id="scnx">Se Connecter</p>
+			<div id="down_decision_buttons">
+				<a href="#start" id="downRegistration"><p>Prêt à démarer votre compte paiementsmobiles.com?</p></a>
+				<a href="#start" id="downContact"><p>Contactez un de nos agents commercial!</p></a>
+				<div id="weAreOnline">
+					<p id="helloMsg">Salut, pouvons-nous vous aider en quoique ce soit?</p>
+					<canvas id="weAreOnlineBox" width="52" height="52"></canvas>
+				</div>
+				<div id="accountMenu"></div><span id="home"></span>
+			</div>
+		</div>
+		<div id="notification_popup">
+			<div class="menu_bar bar" ></div>
+			<div id="notif_msg">
+				<input type="image" src="images/quit.png" id="goBack"/>
+				<p id="notification">Insert notifaction message here</p>
+			</div>
+		</div>
+		<div id="wrap_footer">
+			<footer>
+				<p><a href="#apropos.html">A Propos</a> - <a href="#start" id="footerContact">Contactez Nous</a> - <a href="#conditions.html">Regles &amp; Conditions d'Utilisation</a> - <a href="#confidentialite.html">Confidentialités</a> - <a href="#securite.html">Sécurité</a> - Tous Droits Réservés &copy; IREtechnology 2017</p>
+			</footer>
+		</div>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+		<script type="text/javascript" src="js/jquery.lavalamp.min.js"></script>
+		<script type="text/javascript" src="js/js_cnx_script.js"></script>
+		<script type="text/javascript" src="js/val_ctrl_script.js"></script>
+	</body>
+</html>

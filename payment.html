@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="content-type" content="text/html" charset="utf-8"/>
+		<title>PaiementsMobiles.com|api</title>
+		<link rel="stylesheet" type="text/css" href="css/payment.css"/>
+		<meta name="keywords" content="mobile money, payement en ligne, transaction en ligne, moov money, flooz"/>
+		<meta name="description" content="paiementsmobiles.com: Nous sommes le lien entre vos sites de ventes en ligne et vos clients MTN Money et MOOV Money pour des paiements en toute simplicité, sécurité et fiabilité"/>
+		<meta name="author" content="iretech.com"/>
+		<meta name="width=device-width, initial-scale=1.0"/>
+		<!--[if lt IE 11]>
+			<link rel="stylesheet" type="text/css" href="png_displayer.css"/>
+		<![endif]-->
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+	<body id="doc_scroll_bar">
+		<div id="wrap_header">
+			<header id="start">
+				<div id="logo">
+					<h1><a href="#index.html">Pesowes<span id="pm"></a></span></h1>
+				</div>
+				<nav>
+					<ul class="lavaLampWithImage" id="lava_menu">
+						<li class="current"><a href="payment.html" class="current_menu">Paiement</a></li>
+						<!-- <li><a href="eng/index.html" class="lang">Langue</a></li> -->
+					</ul>
+				</nav>
+				<div id="coming_soon">
+					<article>
+						<p id="news">COMING SOON</p><p><strong>Mobile App</strong>: Bientôt disponible en version android, iOS &amp; windows phone</p>
+					</article>
+				</div>
+				<div id="short_intro">
+					<h3>NOUS VOUS FACILITONS LA VIE AVEC UN MOYEN DE PAYMENT MOBILE EN LIGNE</h3>
+					<p>TOUT CE QU'IL FAUT, C'EST VOTRE NUMERO DE TELEPHONE</p>
+				</div>
+				<div class="flat_icons">
+					<img src="images/phone_icon.png" class="icon shake" alt="" border="0" width="" height=""/><h2>PAYER VOTRE MARCHANT INTERNET EN LIGNE</h2>
+				</div>
+				<div id="accountMenu" class="fictiveBlock" style="display:none;">
+					<p class="create_account_button" id="createAccount">Créer compte paiementsmobiles.com</p>
+					<p class="cnx" id="scnx">Se Connecter</p>
+					<div id="down_decision_buttons">
+						<a href="#start" id="downRegistration"><p>Prêt à démarer votre compte paiementsmobiles.com?</p></a>
+						<a href="#start" id="downContact"><p>Contactez un de nos agents commercial!</p></a>
+					</div>
+					<div id="myAccount"></div><div id="contact"></div>
+				</div>
+				<div class="clear"></div>
+				<div id="illustration_fig">
+					<img src="images/illustration_pay.png" width="" height="" alt="" border="0"/>
+					<img src="images/arrow_icon_pay.png" width="" height="" alt="" class="arrow_icon_pay shake-horizontal"/>
+					<img src="images/start_shopping_arrow_icon.png" width="" height="" alt="" class="start_shopping_arrow_icon shake-horizontal"/>
+				</div>
+				<div id="weAreOnline">
+					<p id="helloMsg">Salut, pouvons-nous vous aider en quoique ce soit?</p>
+					<canvas id="weAreOnlineBox" width="52" height="52"></canvas>
+				</div>
+			</header>
+		</div>
+		<div id="main_content">
+			<div id="paymentForm">
+				<h2>Formulaire de Paiement Mobile en Ligne</h2>
+				<form method="POST" action="" id ="paymentMade">
+					<label for="shop_name"><span class="payment_title">Nom de la boutique</span><input type="text" value="#NomDeLaBoutique Ici" class="pay" id="shop_name" disabled /></label><br/>
+					<label for="description"><span class="payment_title">Description des produits achetés</span><input type="text" value="#DescriptionDesproduitsAchetés Ici" class="pay" id="description" disabled /></label><br/>
+					<label for="amount"><span class="payment_title">Montant du panier</span><input type="text" value="#MontantTotalDuPanierAPayer Ici" class="pay" id="amount" disabled /></label><br/>
+					<label for="fee"><span class="payment_title">Frais PaiementsMobiles.com</span><input type="text" value="#FraisDeFacturation Ici" class="pay" id="fee" disabled /></label><br/>
+					<label for="total"><span class="payment_title">Montant total</span><input type="text" value="#MontanTotal Ici" class="pay" id="total" disabled /></label><br/>
+					<label for="tel"><span class="payment_title">Votre numéro Mobile Money</span><input type="text" value="#NuméroTéléphone Ici" class="pay" id="tel" disabled /></label><br/>
+					<label for="code"><span class="payment_title">Code de paiement</span></label><p id="code_pay"><input type="text" placeholder="Veuillez entrer le code reçus par SMS sur votre numéro" class="pay" id="code" name="code" required /></p>
+					<p id="pay_text">Cliquez sur le bouton payer pour confirmer votre achat depuis votre téléphone portable<input type="button" value="PAYER" class="button" id="pay_button"/></p>
+					<p id="code_not_recieved">Si vous ne recevez pas votre code de paiement dans les minutes qui suivent, cliquez Générer<input type="button" value="GENERER" id="generate_button"/></p>
+					<p id="code_generated"><input type="text" value="#GENERATED_CODE_HERE" class="pay" id="generated" name="code_generated" required disabled /></p>
+				</form>
+			</div>
+			<div id="payment_design">
+				<aside>
+					<img src="images/notice_icon.png" width="" height="" alt="Important Info Icon"/><p>Paiementsmobiles.com est adaptée pour les plateformes MTN Money et MOOV Money</p>
+				</aside>
+				<img src="images/payment_design_icon.png" width="" height="" alt=""/>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="overlay_contact">
+			<div id="menu_bar"></div>
+			<div id="contact_form">
+				<div id="contact_msg">
+					<img src="images/mail.png" width="" height="" alt="Mail Icon"/><p>Ecrivez à notre équipe</p>
+				</div>
+				<form method="POST" action="contact.html">
+					<input type="text" placeholder="Nom" id="fname"/><br/><br/>
+					<input type="text" placeholder="Prénom" id="lname"/><br/><br/>
+					<input type="email" placeholder="Email" id="email"/><br/><br/>
+					<textarea style="font-size: .8em; color: rgb(100, 100, 100);">Comment pouvons nous vous aider?</textarea>
+					<input type="reset" value="Annuler" class="cancel" id="abort"/><input type="submit" value="Envoyer" class="submit" onclick="sendMail()"/>
+				</form>
+			</div>
+		</div>
+		<div id="notification_popup">
+			<div class="menu_bar bar"></div>
+			<div id="notif_msg">
+				<input type="image" src="images/quit.png" id="goBack"/>
+				<p id="notification">Insert notifaction message here</p>
+			</div>
+		</div>
+		<div id="wrap_footer">
+			<footer>
+				<p><a href="#apropos.html">A Propos</a> - <a href="#start" id="footerContact">Contactez Nous</a> - <a href="#conditions.html">Regles &amp; Conditions d'Utilisation</a> - <a href="#confidentialite.html">Confidentialités</a> - <a href="#securite.html">Sécurité</a> - Tous Droits Réservés &copy; IREtechnology 2017</p>
+			</footer>
+		</div>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.min.js"></script>
+		<script type="text/javascript" src="js/jquery.lavalamp.min.js"></script>
+		<script type="text/javascript" src="js/js_cnx_script.js"></script>
+		<script type="text/javascript">
+			window.onload=function() {
+				var weAreOnlineBox=document.getElementById("weAreOnlineBox"), helloMsg=document.getElementById("helloMsg");
+				$(function() {
+					$("#helloMsg").hide();
+					$("#weAreOnlineBox").hide();
+					function showWeAreOnline() {
+						setTimeout(function() {
+							$("#weAreOnlineBox:hidden").fadeIn(3000);
+						}, 6000);
+						setTimeout(function() {
+							$("#helloMsg:hidden").fadeIn("slow", function() {
+								$("#helloMsg").animate({
+									left: "825px"
+								}, "fast"), $("#helloMsg").animate({
+									left: "838px"
+								}, "fast"), $("#helloMsg").animate({
+									left: "830px"
+								}, "fast"), $("#helloMsg").animate({
+									left: "838px"
+								}, "fast");
+							});
+						}, 7000);
+						setTimeout(function() {
+							$("#helloMsg").fadeOut(3000);
+						}, 15000);
+					}
+					showWeAreOnline();
+				});
+				weAreOnlineBox.onmouseover=function() {
+					$("#helloMsg:hidden").fadeIn("slow");
+				};
+				weAreOnlineBox.onmouseout=function() {
+					$("#helloMsg").fadeOut("slow");
+				};
+				weAreOnlineBox.onclick=function() {
+					$("#helloMsg").fadeOut("slow");
+				};
+			}
+			function codeHandler() {
+				var generate_button=document.getElementById("generate_button"), code_generated=document.getElementById("code_generated");
+				generate_button.onclick=function() {
+					code_generated.style.display="block";
+					this.style.cursor="default";
+					this.style.background="rgb(255, 255, 255)";
+					this.style.color="rgb(102, 45, 145)";
+					this.style.border="1px solid rgb(225, 225, 225)";
+					this.value="GENERE";
+					this.style.padding="10px 16px 10px 16px";
+				}
+			}
+			codeHandler();
+		</script>
+	</body>
+</html>
